@@ -6,7 +6,7 @@ class Mproduct extends CI_Model{
 	}
 
 	public function selectOne($id){
-		$this->db->where('product#',$id);
+		$this->db->where('productId',$id);
 		$query = $this->db->get('product');
 		return $query->result_array();
 	}

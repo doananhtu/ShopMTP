@@ -10,7 +10,7 @@ class Musers extends CI_Model{
 		$this->db->select("email,password");
 		$this->db->where("email","$email");
 		$this->db->where("password","$pass");
-		$query=$this->db->get("user");
+		$query=$this->db->get("users");
 		if($query->num_rows() > 0){	
 			return 1;
 		}
@@ -24,7 +24,7 @@ class Musers extends CI_Model{
 		}
 
 		$this->db->where('email',$email);
-		$query = $this->db->get('user');
+		$query = $this->db->get('users');
 		if($query->num_rows() > 0)
 			return $alreadyExists;
 
@@ -34,7 +34,7 @@ class Musers extends CI_Model{
 		$this->db->set('password',$pass);
 		$this->db->set('phone',$capnhat);
 		$this->db->set('address',$capnhat);
-		$query2 = $this->db->insert('user');
+		$query2 = $this->db->insert('users');
 		if($query2 == true)
 			return 1;
 		else
@@ -45,7 +45,7 @@ class Musers extends CI_Model{
 
 		$this->db->select("name,phone,address");
 		$this->db->where("email",$email);
-		$query=$this->db->get("user");
+		$query=$this->db->get("users");
         return $query->result_array();
 	}
 
@@ -54,19 +54,19 @@ class Musers extends CI_Model{
 		$this->db->set('phone',$phone);
 		$this->db->set('address',$address);
 		$this->db->where('email',$email);
-		$this->db->update('user');
+		$this->db->update('users');
 	}
 
 	//thay doi mat khau
 	public function checkCpass($email){
 		$this->db->where("email",$email);
-		$query=$this->db->get("user");
+		$query=$this->db->get("users");
         return $query->result_array();
 	}
 	public function updatePass($email,$npass){
 		$this->db->set('password',$npass);
 		$this->db->where('email',$email);
-		$this->db->update('user');
+		$this->db->update('users');
 	}
 
 	//Xem lịch sử mua hàng
@@ -77,12 +77,12 @@ class Musers extends CI_Model{
 	}
 	public function getIdUser($email){
 		$this->db->where("email",$email);
-		$query = $this->db->get('user');
+		$query = $this->db->get('users');
 		return $query->result_array();
 	}
 	public function getInfoTrans($total,$start,$idu){
 		$this->db->limit($total, $start);
-		$this->db->where("user#",$idu);
+		$this->db->where("userId",$idu);
 		$query = $this->db->get('transaction');
 		return $query->result_array();
 	}

@@ -26,8 +26,8 @@
 			</div>
 			<div class="col-xs-12 col-sm-9 col-md-9">
 				<div class="form">
-					<form method="post" action="<?php echo base_url()?>index.php/adminproduct/Upload
-						?imgfile=<?php echo $product[0]['images'];?>&idp=<?php echo $product[0]['product#'];?>"enctype="multipart/form-data">
+					<form method="post" action="<?php echo base_url()?>index.php/adminproduct/uploadUpdate
+						?imgfile=<?php echo $product[0]['images'];?>&idp=<?php echo $product[0]['productId'];?>"enctype="multipart/form-data">
 						<div class="title">Sửa thông tin sản phẩm</div>
 						<label>Tên: </label><input type="text" placeholder="Tên sản phẩm" id="namep" name="namep" value="<?php echo trim($product[0]['name']);?>"></br>
 						<label>Giá: </label> <input type="text" placeholder="Giá sản phẩm" id="pricep" name="pricep" value="<?php echo $product[0]['price'];?>"></br>
@@ -39,21 +39,21 @@
 						<select name="selectp" class="select">
 							<?php
 								foreach ($catalog as $row) {
-									if(!empty($row['parent#'])){
+									if(!empty($row['parent'])){
 										foreach ($catalog as $row2) {
-											if($row2['catalog#'] == $row['parent#']){
-												if($row['catalog#'] == $product[0]['catalog#'])
-													echo '<option value="'.$row['catalog#'].'" selected="selected">' . $row['name'] ."(" . $row2['name'].")";
+											if($row2['catalogId'] == $row['parent']){
+												if($row['catalogId'] == $product[0]['catalogId'])
+													echo '<option value="'.$row['catalogId'].'" selected="selected">' . $row['name'] ."(" . $row2['name'].")";
 												else
-													echo '<option value="'.$row['catalog#'].'">' . $row['name'] ."(" . $row2['name'].")";
+													echo '<option value="'.$row['catalogId'].'">' . $row['name'] ."(" . $row2['name'].")";
 											}										
 											echo '</option>';
 										}										
 									}else{
-										if($row['catalog#'] == $product[0]['catalog#'])
-											echo '<option value="'.$row['catalog#'].'" selected="selected">' . $row['name'];
+										if($row['catalogId'] == $product[0]['catalogId'])
+											echo '<option value="'.$row['catalogId'].'" selected="selected">' . $row['name'];
 										else
-											echo '<option value="'.$row['catalog#'].'">' . $row['name'];
+											echo '<option value="'.$row['catalogId'].'">' . $row['name'];
 										echo '</option>';
 									}						
 								}							

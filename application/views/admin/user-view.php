@@ -42,8 +42,8 @@
 								echo '<tr>';
 								echo '<td>'.$row['name'].'</td>';
 								echo '<td>'.$row['email'].'</td>';
-								echo '<td><a href="'.base_url().'index.php/adminproduct/userEdit?idu='.$row['user#'].'"><i class="fa fa-pencil-square-o"></i> Edit & View</a></td>';
-								echo '<td><a href="'.base_url().'index.php/adminproduct/userDelete?idu='.$row['user#'].'"><i class="fa fa-times"></i> Delete</a></td>';
+								echo '<td><a href="'.base_url().'index.php/adminproduct/userEdit?idu='.$row['userId'].'"><i class="fa fa-pencil-square-o"></i> Edit & View</a></td>';
+								echo '<td><a href="'.base_url().'index.php/adminproduct/userDelete?idu='.$row['userId'].'"><i class="fa fa-times"></i> Delete</a></td>';
 								echo '</tr>';							
 							}						
 						?>

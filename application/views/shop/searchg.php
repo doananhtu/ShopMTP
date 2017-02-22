@@ -125,7 +125,7 @@
                     <?php 
                         foreach ($product as $row) {
                             echo '<div class="col-xs-12 col-sm-6 col-md-3 product">';
-                            echo '<a href="'. base_url().'index.php/product/index?id='.$row['product#'] .'">';
+                            echo '<a href="'. base_url().'index.php/product/index?id='.$row['productId'] .'">';
                             echo '<img width="180" height="260" src="' . $row['images'] . '">';
                             echo '<div class="title">'. $row['name'] .'</div>';
                             echo '<div class="price">'. $row['price'] .' VNĐ</div>';

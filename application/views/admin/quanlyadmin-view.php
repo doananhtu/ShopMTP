@@ -48,8 +48,8 @@
 								echo '<tr>';
 								echo '<td>'.$row['adminName'].'</td>';
 								echo '<td>'.$row['name'].'</td>';
-								echo '<td><a href="'.base_url().'index.php/adminproduct/adminEdit?idad='.$row['AD#'].'"><i class="fa fa-pencil-square-o"></i> Edit & View</a></td>';
-								echo '<td><a href="'.base_url().'index.php/adminproduct/adminDelete?idad='.$row['AD#'].'"><i class="fa fa-times"></i> Delete</a></td>';
+								echo '<td><a href="'.base_url().'index.php/adminproduct/adminEdit?idad='.$row['adminId'].'"><i class="fa fa-pencil-square-o"></i> Edit & View</a></td>';
+								echo '<td><a href="'.base_url().'index.php/adminproduct/adminDelete?idad='.$row['adminId'].'"><i class="fa fa-times"></i> Delete</a></td>';
 								echo '</tr>';							
 							}						
 						?>

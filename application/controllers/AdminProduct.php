@@ -31,7 +31,8 @@ class AdminProduct extends CI_Controller{
 		$this->load->view("admin/product-insert",$data);
 	}
 
-	public function Upload(){
+	//Upload
+	public function uploadInsert(){
 		//Load session
 		$info = $this->session->userdata('adminInfo');
 		$data['info'] = $info;
@@ -41,7 +42,38 @@ class AdminProduct extends CI_Controller{
 			header('location: http://localhost/mtp/index.php/admin/login');
 		///////
 
-		$config['upload_path']          = "./asset/images/";
+		$config['upload_path']          = "./asset/images/products";
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['max_size']             = 500;
+        $config['max_width']            = 1024;
+        $config['max_height']           = 968;
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('image')){
+        	$imageInfo = $this->upload->data();
+        	$catalogid = $this->input->post('selectp');
+        	$name = $this->input->post('namep');
+        	$price = $this->input->post('pricep');
+        	$des = $this->input->post('description');
+        	if(empty($des))
+        		$des="đang cập nhật";
+        	$images = "http://localhost/mtp/asset/images/products/".$imageInfo['file_name'];
+        	$this->Madmin->insertProduct($catalogid,$name,$price,$des,$images);
+        	header('location: http://localhost/mtp/index.php/adminproduct/showp?idc='.$catalogid);
+        }        
+	}
+
+	public function uploadUpdate(){
+		//Load session
+		$info = $this->session->userdata('adminInfo');
+		$data['info'] = $info;
+		$data['admin'] = $this->Madmin->select($info);
+		$data['catalog'] = $this->Madmin->selectAllCatalog();
+		if(empty($info))
+			header('location: http://localhost/mtp/index.php/admin/login');
+		///////
+
+		$config['upload_path']          = "./asset/images/products";
         $config['allowed_types']        = 'gif|jpg|png';
         $config['max_size']             = 500;
         $config['max_width']            = 1024;
@@ -49,15 +81,6 @@ class AdminProduct extends CI_Controller{
         $this->load->library('upload', $config);
 
         if ( ! $this->upload->do_upload('image')){
-        	$catalogid = $this->input->post('selectp');
-        	$name = $this->input->post('namep');
-        	$price = $this->input->post('pricep');
-        	$des = $this->input->post('description');
-        	if(empty($des))
-        		$des="đang cập nhật";
-        	$images = $this->input->get('imgfile');
-        	$productid = $this->input->get('idp');
-        	$this->Madmin->updateProduct($productid,$catalogid,$name,$price,$des,$images);
         	header('location: http://localhost/mtp/index.php/adminproduct/showp?idc='.$catalogid);
         }else{
         	$imageInfo = $this->upload->data();
@@ -67,7 +90,7 @@ class AdminProduct extends CI_Controller{
         	$des = $this->input->post('description');
         	if(empty($des))
         		$des="đang cập nhật";
-        	$images = "http://localhost/mtp/asset/images/".$imageInfo['file_name'];
+        	$images = "http://localhost/mtp/asset/images/products/".$imageInfo['file_name'];
         	$productid = $this->input->get('idp');
         	$this->Madmin->updateProduct($productid,$catalogid,$name,$price,$des,$images);
         	header('location: http://localhost/mtp/index.php/adminproduct/showp?idc='.$catalogid);

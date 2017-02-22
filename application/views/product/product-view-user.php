@@ -80,10 +80,10 @@
                     <ul class="menu-watch">
                         <?php 
                         foreach ($catalog as $row){
-                            if($row['parent#'] == null){
+                            if($row['parent'] == null){
                                 echo '<li><a href ="#"><i class="fa fa-caret-right"></i> '. $row['name'] .'</a><ul>';
                                 foreach ($catalog as $row2){
-                                    if($row2['parent#'] == $row['catalog#'])
+                                    if($row2['parent'] == $row['catalogId'])
                                         echo '<li>'. $row2['name'].'</li>';
                                 }                                
                                 echo '</ul>';              
@@ -138,7 +138,7 @@
                                 echo '<div class="des">'.$product[0]['description'].'</div>';
                             ?>
                         </div>
-                        <a class="add" href="<?php echo base_url().'index.php/cart/add?idp='.$product[0]['product#'].'&name='.trim($product[0]['name']).'&price='.$product[0]['price'];?>"><button class="add-to-cart add" id="add">Đặt Hàng</button></a>
+                        <a class="add" href="<?php echo base_url().'index.php/cart/add?idp='.$product[0]['productId'].'&name='.trim($product[0]['name']).'&price='.$product[0]['price'];?>"><button class="add-to-cart add" id="add">Đặt Hàng</button></a>
                     </div>
             	</div>
             </div>

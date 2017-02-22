@@ -9,7 +9,7 @@ class Mcart extends CI_Model{
 	public function creTrans($userid,$fullname,$email,$phone,$address,$amount,$mess,$created,$createt){
 		$status = 0;
 		$this->db->set("status",$status);
-		$this->db->set("user#",$userid);
+		$this->db->set("userId",$userid);
 		$this->db->set("fullname",$fullname);
 		$this->db->set("email",$email);
 		$this->db->set("phone",$phone);
@@ -23,7 +23,7 @@ class Mcart extends CI_Model{
 
 	public function findUserId($email){
 		$this->db->where("email",$email);
-		$query = $this->db->get('user');
+		$query = $this->db->get('users');
 		return $query->result_array();
 	}
 
@@ -34,16 +34,16 @@ class Mcart extends CI_Model{
 	}
 
 	public function creOrder($trans,$product,$name,$qty,$amount,$size){
-		$this->db->set("transaction#",$trans);
-		$this->db->set("product#",$product);
+		$this->db->set("transactionId",$trans);
+		$this->db->set("productId",$product);
 		$this->db->set("name",$name);
 		$this->db->set("qty",$qty);
 		$this->db->set("amount",$amount);
 		$this->db->set("size",$size);
-		$this->db->insert("order");
+		$this->db->insert("orders");
 	}
 	public function selectImgPro($id){
-		$this->db->where("product#",$id);
+		$this->db->where("productId",$id);
 		$query = $this->db->get('product');
 		return $query->result_array();
 	}

@@ -29,9 +29,9 @@
 						<?php 
 							foreach ($catalog as $row) {
 								echo '<tr>';
-								echo '<td><a href="'.base_url().'index.php/adminproduct/showp?idc='.$row['catalog#'].'">'.$row['name'].'</a></td>';
+								echo '<td><a href="'.base_url().'index.php/adminproduct/showp?idc='.$row['catalogId'].'">'.$row['name'].'</a></td>';
 								echo '<td><a href="'.base_url().'index.php/adminproduct/catalogEdit"><i class="fa fa-pencil-square-o"></i> Edit</a></td>';
-								echo '<td><a href="'.base_url().'index.php/adminproduct/catalogDelete?idc='.$row['catalog#'].'&pidc='.$idc.'"><i class="fa fa-times"></i> Delete</a></td>';
+								echo '<td><a href="'.base_url().'index.php/adminproduct/catalogDelete?idc='.$row['catalogId'].'&pidc='.$idc.'"><i class="fa fa-times"></i> Delete</a></td>';
 								echo '</tr>';
 							}							
 						?>				

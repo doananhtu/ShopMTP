@@ -126,14 +126,14 @@
 					<?php 
                         foreach ($product as $row) {
                             echo '<div class="col-xs-12 col-sm-6 col-md-3 product">';
-                            echo '<a href="'. base_url().'index.php/product/index?id='.$row['product#'] .'">';
+                            echo '<a href="'. base_url().'index.php/product/index?id='.$row['productId'] .'">';
                             echo '<img width="180" height="260" src="' . $row['images'] . '">';
                             echo '';
                             echo '<div class="title">'. $row['name'] .'</div>';
                             echo '<div class="price">'. number_format($row['price']) .' VNĐ</div>';
                             echo '</a>';
-                            echo '<a class="add" href="'.base_url().'index.php/cart/add?idp='.$row['product#'].'&name='.trim($row['name']).'&price='.$row['price'].'" style="color:#fff;">';
-                            echo '<div class="add-to-cart" id="add" href="'.base_url().'index.php/cart/add?idp='.$row['product#'].'&name='.trim($row['name']).'&price='.$row['price'].'"><i class="fa fa-cart-arrow-down"></i> ADD TO CART</div>';
+                            echo '<a class="add" href="'.base_url().'index.php/cart/add?idp='.$row['productId'].'&name='.trim($row['name']).'&price='.$row['price'].'" style="color:#fff;">';
+                            echo '<div class="add-to-cart" id="add" href="'.base_url().'index.php/cart/add?idp='.$row['productId'].'&name='.trim($row['name']).'&price='.$row['price'].'"><i class="fa fa-cart-arrow-down"></i> ADD TO CART</div>';
                             echo '</a></div>';
                         }
                     ?>

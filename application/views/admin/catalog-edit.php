@@ -24,7 +24,7 @@
 				</div>		
 			</div>
 			<div class="col-xs-12 col-sm-9 col-md-9">
-				<form method="post" action="<?php echo base_url()?>index.php/adminproduct/catalogEdit?idc=<?php echo $catalog[0]['catalog#'];?>">
+				<form method="post" action="<?php echo base_url()?>index.php/adminproduct/catalogEdit?idc=<?php echo $catalog[0]['catalogId'];?>">
 					<div class="form">
 						<label>Tên danh mục: </label>
 						<input type="text" name="catalogname" value="<?php echo trim($catalog[0]['name']);?>" class="input">

@@ -28,11 +28,11 @@
 						<tr><th colspan="3">Bảng Quản Lý</th></tr>
 						<?php 
 							foreach ($catalog as $row) {
-								if(empty($row['parent#'])){
+								if(empty($row['parent'])){
 									echo '<tr>';
-									echo '<td><a href="'.base_url().'index.php/adminproduct/showp?idc='.$row['catalog#'].'">'.$row['name'].'</a></td>';
-									echo '<td><a href="'.base_url().'index.php/adminproduct/catalogEdit?idc='.$row['catalog#'].'"><i class="fa fa-pencil-square-o"></i> Edit</a></td>';
-									echo '<td><a href="'.base_url().'index.php/adminproduct/catalogDelete?idc='.$row['catalog#'].'"><i class="fa fa-times"></i> Delete</a></td>';
+									echo '<td><a href="'.base_url().'index.php/adminproduct/showp?idc='.$row['catalogId'].'">'.$row['name'].'</a></td>';
+									echo '<td><a href="'.base_url().'index.php/adminproduct/catalogEdit?idc='.$row['catalogId'].'"><i class="fa fa-pencil-square-o"></i> Edit</a></td>';
+									echo '<td><a href="'.base_url().'index.php/adminproduct/catalogDelete?idc='.$row['catalogId'].'"><i class="fa fa-times"></i> Delete</a></td>';
 									echo '</tr>';
 								}							
 							}						

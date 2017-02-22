@@ -33,19 +33,19 @@
     <ul>
         <?php
             foreach ($catalog as $row){
-                 if($row['parent#'] == null){
-                    echo '<li><a href ="'.base_url().'index.php/catalog/index?id='.$row['catalog#'].'">';
+                 if($row['parent'] == null){
+                    echo '<li><a href ="'.base_url().'index.php/catalog/index?id='.$row['catalogId'].'">';
                     echo $row['name'];
                     foreach ($catalog as $row2){
-                        if($row2['parent#'] == $row['catalog#']){
+                        if($row2['parent'] == $row['catalogId']){
                             echo '<i class="fa fa-caret-right" style="position: absolute; right:10px; font-size:20px;"></i></a>';
                             break;
                         }
                     }
                     echo '<ul>';
                     foreach ($catalog as $row2){
-                        if($row2['parent#'] == $row['catalog#']){
-                            echo '<li><a href="'.base_url().'index.php/catalog/index?id='.$row2['catalog#'].'">'. $row2['name'];
+                        if($row2['parent'] == $row['catalogId']){
+                            echo '<li><a href="'.base_url().'index.php/catalog/index?id='.$row2['catalogId'].'">'. $row2['name'];
                             echo '</a></li>';
                         }
                     }                                

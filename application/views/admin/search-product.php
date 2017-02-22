@@ -47,8 +47,8 @@
 							echo '<tr>';
 							echo '<td><a href="#">'.$product[0]['name'].'</a></td>';
 							echo '<td><img src="'.$product[0]['images'].'" width=50px></td>';
-							echo '<td><a href="http://localhost/mtp/index.php/adminproduct/productEdit?idp='.$product[0]['product#'].'"><i class="fa fa-pencil-square-o"></i> Edit</a></td>';
-							echo '<td><a href="'.base_url().'index.php/adminproduct/productDelete?idp='.$product[0]['product#'].'&idc='.$idc.'">'.'<i class="fa fa-times"></i> Delete</a></td>';
+							echo '<td><a href="http://localhost/mtp/index.php/adminproduct/productEdit?idp='.$product[0]['productId'].'"><i class="fa fa-pencil-square-o"></i> Edit</a></td>';
+							echo '<td><a href="'.base_url().'index.php/adminproduct/productDelete?idp='.$product[0]['productId'].'&idc='.$idc.'">'.'<i class="fa fa-times"></i> Delete</a></td>';
 							echo '</tr>';
 						?>
 						<tr>

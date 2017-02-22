@@ -52,7 +52,7 @@
 						<?php 
 							foreach ($trans as $row) {							
 								echo '<tr>';
-								echo '<td>'.$row['transaction#'].'</td>';
+								echo '<td>'.$row['transactionId'].'</td>';
 								if($row['status'] == 0){
 									echo '<td>Chưa xong</td>';
 								}else{
@@ -65,8 +65,8 @@
 								echo '<td>'.number_format($row['amount']).'</td>';
 								echo '<td>'.$row['message'].'</td>';
 								echo '<td>'.$row['created'].'</td>';
-								echo '<td><a href="'.base_url().'index.php/adminproduct/transEdit?idtrans='.$row['transaction#'].'"><i class="fa fa-pencil-square-o"></i> Edit</a></td>';
-								echo '<td><a href="'.base_url().'index.php/adminproduct/transDelete?idtrans='.$row['transaction#'].'"><i class="fa fa-times"></i> Delete</a></td>';
+								echo '<td><a href="'.base_url().'index.php/adminproduct/transEdit?idtrans='.$row['transactionId'].'"><i class="fa fa-pencil-square-o"></i> Edit</a></td>';
+								echo '<td><a href="'.base_url().'index.php/adminproduct/transDelete?idtrans='.$row['transactionId'].'"><i class="fa fa-times"></i> Delete</a></td>';
 								echo '</tr>';							
 							}						
 						?>

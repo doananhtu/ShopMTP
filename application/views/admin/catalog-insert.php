@@ -32,8 +32,8 @@
 							option
 							<?php
 								foreach ($catalog as $row) {
-									if(empty($row['parent#']) || $row['parent#'] == 0){
-										echo '<option value="'.$row['catalog#'].'">Thuộc danh mục ' . $row['name'];
+									if(empty($row['parent']) || $row['parent'] == 0){
+										echo '<option value="'.$row['catalogId'].'">Thuộc danh mục ' . $row['name'];
 										echo '</option>';												
 									}					
 								}		

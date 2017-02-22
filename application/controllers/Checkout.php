@@ -59,7 +59,7 @@ class Checkout extends CI_Controller{
             $createt = date("h:i:sa");
 
             $userid = $this->Mcart->findUserId($data["email"]);
-            $this->Mcart->creTrans($userid[0]['user#'],$fullname,$email,$phone,$address,$amount,$mess,$created,$createt);
+            $this->Mcart->creTrans($userid[0]['userId'],$fullname,$email,$phone,$address,$amount,$mess,$created,$createt);
         
             header('location: http://localhost/mtp/index.php/checkout/creOrder?createt='.$createt);
         }  
@@ -70,7 +70,7 @@ class Checkout extends CI_Controller{
         $transid = $this->Mcart->selectOneIdTrans($createt);
         $cart = $this->cart->contents();
         foreach ($cart as $item) {
-            $this->Mcart->creOrder($transid[0]['transaction#'],$item['id'],$item['name'],$item['qty'],$item['subtotal'],$item['options']['size']);
+            $this->Mcart->creOrder($transid[0]['transactionId'],$item['id'],$item['name'],$item['qty'],$item['subtotal'],$item['options']['size']);
         }
         header('location: http://localhost/mtp/index.php/checkout/clearCart');
     }
