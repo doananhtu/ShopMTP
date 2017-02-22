@@ -11,7 +11,7 @@ class Cart extends CI_Controller{
 	public function index(){
         $infouser = $this->session->userdata('userInfo');
         if(empty($infouser))
-            header('location: http://localhost/mtp/index.php/users');
+            header('location:'.base_url().'index.php/users');
         $data["email"] = $infouser;
 		//Show ra gio hang.
         $cart = $this->cart->contents();
@@ -30,7 +30,7 @@ class Cart extends CI_Controller{
 	public function add(){
         $infouser = $this->session->userdata('userInfo');
         if(empty($infouser))
-            header('location: http://localhost/mtp/index.php/users');
+            header('location:'.base_url().'index.php/users');
         else{
             $data = array(
                 'id' => $this->input->get('idp'),
@@ -40,7 +40,7 @@ class Cart extends CI_Controller{
                 'options' => array('size'=>'0')
             );
             $this->cart->insert($data);
-            redirect('http://localhost/mtp/');
+            redirect(base_url());
         }
         //Them order
 		
@@ -60,7 +60,7 @@ class Cart extends CI_Controller{
                 break;
             }
         }
-        redirect('http://localhost/mtp/index.php/cart','refresh');
+        redirect(base_url().'index.php/cart','refresh');
     }
 
     public function update_qty_size(){
@@ -79,7 +79,7 @@ class Cart extends CI_Controller{
             $this->cart->update($data);
             $i = $i+1;
         }
-        redirect('http://localhost/mtp/index.php/cart','refresh');
+        redirect(base_url().'index.php/cart','refresh');
     }
 
 	public function destroy(){

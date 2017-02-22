@@ -12,13 +12,14 @@ class Users extends CI_Controller{
 
 	public function index(){
 		$info = $this->session->userdata('userInfo');
-		if(empty($info))
-			header('location: http://localhost/mtp/index.php/users/login');
+		if(empty($info)){
+			header('location:'.base_url().'index.php/users/login');
+		}
 		$data["email"] = $info;		
 		$catalog_array = $this->Mshop->getCatalog();
 		$data["catalog"] = $catalog_array;
 		// Get Product
-		$config['base_url'] = 'http://localhost//mtp/index.php/users/index';
+		$config['base_url'] = base_url().'index.php/users/index';
 		$config['total_rows'] = $this->Mshop->count_product();
 		$config['per_page'] = 8;
         $config['uri_segment'] = 3;
@@ -59,7 +60,7 @@ class Users extends CI_Controller{
 	public function login(){
 		$info = $this->session->userdata('userInfo');
 		if(!empty($info))
-			header('location: http://localhost/mtp/index.php/users');
+			header('location:'.base_url().'index.php/users');
 
 		$this->load->Model("Musers");
 		$this->form_validation->set_rules('fusername', 'email', 'required|valid_email',array(
@@ -79,7 +80,7 @@ class Users extends CI_Controller{
 			if ($data['check'] == 1){
 				$userData = $email;
 				$this->session->set_userdata('userInfo', $userData);
-				header('location: http://localhost/mtp/index.php/users');
+				header('location:'.base_url().'index.php/users');
 			}else
 			{
 				$data['error'] = "Email hoặc mật khẩu không tồn tại"; 
@@ -91,7 +92,7 @@ class Users extends CI_Controller{
 
 	public function logout(){
 		$this->session->unset_userdata('userInfo');
-		header('location: http://localhost/mtp/index.php/shop');
+		header('location:'.base_url().'index.php/shop');
 	}
 
 	public function register(){
@@ -125,14 +126,14 @@ class Users extends CI_Controller{
 			if($data["checkInsert"] == 2)
 				$data['error'] = "Email đã tồn tại. Bạn hay dùng email khác để đăng ký!";
 			if($data["checkInsert"] == 1)
-				header('location: http://localhost/mtp/index.php/users/login');
+				header('location:'.base_url().'index.php/users/login');
 			$this->load->view("users/register",$data);
         }
 	}
 	public function infoUser(){
 		$info = $this->session->userdata('userInfo');
 		if(empty($info))
-			header('location: http://localhost/mtp/index.php/users/login');
+			header('location:'.base_url().'index.php/users/login');
 		$email= $info;
 
 		$query = $this->Musers->selectInfo($email);
@@ -162,7 +163,7 @@ class Users extends CI_Controller{
 			$address = $this->input->post('faddress');
 			if(!empty($name) && !empty($phone) && !empty($address)){
 				$check = $this->Musers->updateInfo($email,$name,$phone,$address);
-				header('location: http://localhost/mtp/index.php/users/');
+				header('location:'.base_url().'index.php/users');
 			}
 			$this->load->view("users/info-user",$data);
         }	
@@ -171,7 +172,7 @@ class Users extends CI_Controller{
 	public function changePass(){
 		$info = $this->session->userdata('userInfo');
 		if(empty($info))
-			header('location: http://localhost/mtp/index.php/users/login');
+			header('location:'.base_url().'index.php/users/login');
 		$email= $info;
 
 		$this->form_validation->set_rules('cpass', 'Mật khẩu', 'required|min_length[6]',array(
@@ -194,9 +195,9 @@ class Users extends CI_Controller{
 			if($check != null && $cpass == $pass){
 				$this->Musers->updatePass($email,$npass);
 				$this->session->unset_userdata('userInfo');
-				header('location: http://localhost/mtp/index.php/users/login');
+				header('location:'.base_url().'index.php/users/login');
 			}else{
-				header('location: http://localhost/mtp/index.php/users/changePass');
+				header('location:'.base_url().'index.php/users/changePass');
 			}
 			$this->load->view("users/change-pass",$data);
         }	
@@ -205,7 +206,7 @@ class Users extends CI_Controller{
 	public function transHis(){
 		$info = $this->session->userdata('userInfo');
 		if(empty($info))
-			header('location: http://localhost/mtp/index.php/users/login');
+			header('location:'.base_url().'index.php/users/login');
 		$data['email']= $info;
 
 		$user = $this->Musers->getIdUser($data['email']);
@@ -248,7 +249,7 @@ class Users extends CI_Controller{
 	public function search(){
 		$info = $this->session->userdata('userInfo');
 		if(empty($info))
-			header('location: http://localhost/mtp/index.php/users/login');
+			header('location:'.base_url().'index.php/users/login');
 		$data["email"] = $info;		
 		$catalog_array = $this->Mshop->getCatalog();
 		$data["catalog"] = $catalog_array;

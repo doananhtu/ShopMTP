@@ -13,7 +13,7 @@ class Checkout extends CI_Controller{
     public function index(){
         $info = $this->session->userdata('userInfo');
         if(empty($info))
-            header('location: http://localhost/mtp/index.php/users');
+            header('location: '.base_url().'index.php/users');
         $data["email"] = $info;
         //Show ra gio hang.
         $cart = $this->cart->contents();
@@ -25,7 +25,7 @@ class Checkout extends CI_Controller{
     public function creTrans(){
         $info = $this->session->userdata('userInfo');
         if(empty($info))
-            header('location: http://localhost/mtp/index.php/users');
+            header('location: '.base_url().'index.php/users');
         $data["email"] = $info;
         $amount = $this->input->get("amount");
         $this->form_validation->set_rules('fullname', 'họ tên', 'required|min_length[6]',array(
@@ -61,7 +61,7 @@ class Checkout extends CI_Controller{
             $userid = $this->Mcart->findUserId($data["email"]);
             $this->Mcart->creTrans($userid[0]['userId'],$fullname,$email,$phone,$address,$amount,$mess,$created,$createt);
         
-            header('location: http://localhost/mtp/index.php/checkout/creOrder?createt='.$createt);
+            header('location: '.base_url().'index.php/checkout/creOrder?createt='.$createt);
         }  
     }
 
@@ -72,13 +72,13 @@ class Checkout extends CI_Controller{
         foreach ($cart as $item) {
             $this->Mcart->creOrder($transid[0]['transactionId'],$item['id'],$item['name'],$item['qty'],$item['subtotal'],$item['options']['size']);
         }
-        header('location: http://localhost/mtp/index.php/checkout/clearCart');
+        header('location: '.base_url().'index.php/checkout/clearCart');
     }
 
     public function clearCart(){
         $info = $this->session->userdata('userInfo');
         if(empty($info))
-            header('location: http://localhost/mtp/index.php/users');
+            header('location: '.base_url().'index.php/users');
         $data["email"] = $info;
         $this->cart->destroy();
         $this->load->view("shop/result",$data);

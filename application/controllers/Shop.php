@@ -14,7 +14,7 @@ class Shop extends CI_Controller{
 		$catalog_array = $this->Mshop->getCatalog();
 		$data["catalog"] = $catalog_array;
 		// Get Product
-		$config['base_url'] = 'http://localhost//mtp/index.php/shop/index';
+		$config['base_url'] = base_url().'index.php/shop/index';
 		$config['total_rows'] = $this->Mshop->count_product();
 		$config['per_page'] = 8;
         $config['uri_segment'] = 3;
@@ -52,7 +52,7 @@ class Shop extends CI_Controller{
 		$this->load->view("shop/shop-view",$data);
 		$info = $this->session->userdata('userInfo');
 		if(!empty($info))
-			header('location: http://localhost/mtp/index.php/users');		
+			header('location: '.base_url().'index.php/users');		
 	}
 	
 	function about(){
@@ -69,7 +69,7 @@ class Shop extends CI_Controller{
 		$s = $this->input->get("str");
 		$s = strtoupper($s);
 		// Get Product
-		$config['base_url'] = 'http://localhost/mtp/index.php/shop/search';
+		$config['base_url'] = base_url().'index.php/shop/search';
 		$config['total_rows'] = $this->Mshop->count_searchProduct($s);
 		$config['per_page'] = 8;
         $config['uri_segment'] = 3;

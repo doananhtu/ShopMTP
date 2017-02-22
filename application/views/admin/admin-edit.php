@@ -26,7 +26,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-9 col-md-9">
 				<div class="form">
-					<form method="post" action="http://localhost/mtp/index.php/adminproduct/adminEdit?idad=<?php echo $admin[0]['AD#'];?>">
+					<form method="post" action="<?php echo base_url()?>index.php/adminproduct/adminEdit?idad=<?php echo $admin[0]['AD#'];?>">
 						<label>Name login: </label><input type="text" name="namelogin" value="<?php echo trim($admin[0]['adminName']);?>"></br>
 						<label>Mật khẩu: </label><input type="text" name="pass" value="<?php echo trim($admin[0]['password']);?>"></br>
 						<label>Full name: </label><input type="text" name="fullname" value="<?php echo trim($admin[0]['name']);?>"></br>

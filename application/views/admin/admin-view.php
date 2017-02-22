@@ -23,7 +23,7 @@
 			<span style="font-size:50px;"><i class="fa fa-user"></i></span><br>
 			<span style="font-size:20px;">USERS</span>
 		</div></a>
-		<a href="http://localhost/mtp/index.php/adminproduct/showtrans"><div class="tiles tiles2">
+		<a href="<?php echo base_url()?>index.php/adminproduct/showtrans"><div class="tiles tiles2">
 			<span style="font-size:50px;"><i class="fa fa-cart-arrow-down"></i></span><br>
 			<span style="font-size:20px;">CARTS</span>
 		</div></a>
@@ -35,11 +35,11 @@
 			<span style="font-size:50px;"><i class="fa fa-home"></i></span><br>
 			<span style="font-size:20px;">MY SHOP</span>
 		</div></a>
-		<a href="http://localhost/mtp/index.php/adminproduct/showc"><div class="tiles tiles5">
+		<a href="<?php echo base_url()?>index.php/adminproduct/showc"><div class="tiles tiles5">
 			<span style="font-size:50px;"><i class="fa fa-list-ul"></i></span><br>
 			<span style="font-size:20px;">CATALOG</span>
 		</div></a>
-		<a href="http://localhost/mtp/index.php/adminproduct"><div class="tiles tiles6">
+		<a href="<?php echo base_url()?>index.php/adminproduct"><div class="tiles tiles6">
 			<span style="font-size:50px;"><i class="fa fa-star"></i></span><br>
 			<span style="font-size:20px;">PRODUCTS</span>
 		</div></a>

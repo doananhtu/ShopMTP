@@ -58,7 +58,7 @@
 										if(email == ""){
 											swal("Vui lòng nhập đúng tên email của người dùng!");
 										}else{
-											url = "http://localhost/mtp/index.php/adminproduct/userSearch?email="+email;
+											url = "<?php echo base_url()?>index.php/adminproduct/userSearch?email="+email;
 											window.location = url;
 										}
 									});

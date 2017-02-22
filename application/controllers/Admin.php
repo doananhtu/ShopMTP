@@ -14,14 +14,14 @@
 			$data['info'] = $info;
 			$data['admin'] = $this->Madmin->select($info);
 			if(empty($info))
-				header('location: http://localhost/mtp/index.php/admin/login');
+				header('location: '.base_url().'index.php/admin/login');
 			$this->load->view("admin/admin-view",$data);
 		}
 
 		public function login(){
 			$info = $this->session->userdata('adminInfo');
 			if(!empty($info))
-				header('location: http://localhost/mtp/index.php/admin');
+				header('location: '.base_url().'index.php/admin');
 			
 			$this->form_validation->set_rules('fadmin', 'Tên đăng nhập', 'required',array(
 				'required' => "Bạn chưa nhập %s"
@@ -39,7 +39,7 @@
 				if ($data['check'] == 1){
 					$adminData = $name;
 					$this->session->set_userdata('adminInfo', $adminData);
-					header('location: http://localhost/mtp/index.php/admin');
+					header('location: '.base_url().'index.php/admin');
 				}
 				$this->load->view("admin/login-admin",$data);
         	}	
@@ -47,7 +47,7 @@
 
 		public function logout(){
 			$this->session->unset_userdata('adminInfo');
-			header('location: http://localhost/mtp/index.php/admin/login');
+			header('location: '.base_url().'index.php/admin/login');
 		}
 	}
 ?>

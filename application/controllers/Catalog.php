@@ -26,7 +26,7 @@ class Catalog extends CI_Controller{
 				array_push($array,$row['catalog#']);
 			}
 			// Get Product
-			$config['base_url'] = 'http://localhost//mtp/index.php/catalog/index';
+			$config['base_url'] = base_url().'index.php/catalog/index';
 			$config['total_rows'] = $this->Mcatalog->count_product2($array);
 			$config['per_page'] = 8;
 	        $config['uri_segment'] = 3;
@@ -67,7 +67,7 @@ class Catalog extends CI_Controller{
 			$this->load->view("/shop/catalog-view",$data);
 		}else{
 			// Get Product
-			$config['base_url'] = 'http://localhost//mtp/index.php/catalog/index';
+			$config['base_url'] = base_url().'index.php/catalog/index';
 			$config['total_rows'] = $this->Mcatalog->count_product($data['id']);
 			$config['per_page'] = 8;
 	        $config['uri_segment'] = 3;

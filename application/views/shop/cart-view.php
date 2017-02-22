@@ -78,7 +78,7 @@
         <div class="row">
             <form method="post" action="<?php echo base_url()?>index.php/cart/update_qty_size">
             <h2 style="margin-top:100px;">
-                <a href="http://localhost/mtp/index.php"><span style="color:#03AC9A;"><i class="fa fa-home"></i> </span></a>
+                <a href="<?php echo base_url()?>index.php"><span style="color:#03AC9A;"><i class="fa fa-home"></i> </span></a>
                 <span><i class="fa fa-angle-double-right"></i></span>
                 <span style="color:#F99A12; font-weight: bold;">GIỎ HÀNG CỦA BẠN</span>
             </h2>
@@ -119,7 +119,7 @@
                         echo '<td>'.number_format($item['subtotal']);
                         echo '</td>';
 
-                        echo '<td><a href="http://localhost/mtp/index.php/cart/remove?idp='.$item['id'].'"><i class="fa fa-times" style="color:#000;"></i>';
+                        echo '<td><a href="<?php echo base_url()?>index.php/cart/remove?idp='.$item['id'].'"><i class="fa fa-times" style="color:#000;"></i>';
                         echo '</a></td></tr>';
                         $i = $i +1;
                     }
@@ -132,10 +132,10 @@
                     </td>
                     <td colspan="4">
                         <div>
-                            <a href="http://localhost/mtp/index.php"><div class="cart-control">Quay lại cửa hàng</div></a>
+                            <a href="<?php echo base_url()?>index.php"><div class="cart-control">Quay lại cửa hàng</div></a>
                             <input type="submit" id="udqty" value="Cập nhật thông tin" class="submit cart-control">
-                            <a href="http://localhost/mtp/index.php/cart/destroy"><div class="cart-control">Xóa toàn bộ giỏ hàng</div></a>
-                            <a href="http://localhost/mtp/index.php/checkout?amount=<?php echo $sum?>"><div class="cart-control">Thanh toán ngay</div></a>
+                            <a href="<?php echo base_url()?>index.php/cart/destroy"><div class="cart-control">Xóa toàn bộ giỏ hàng</div></a>
+                            <a href="<?php echo base_url()?>index.php/checkout?amount=<?php echo $sum?>"><div class="cart-control">Thanh toán ngay</div></a>
                         </div>
                     </td>
                 </tr>

@@ -23,7 +23,7 @@
                 <ul class="nav navbar-nav">
                     <li class=""><a href="#">Sản phẩm<span class="sr-only">(current)</span></a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-gift" style="color:#F68C22"></i> Khuyến mãi</a></li>
-                    <li><a href="http://localhost/mtp/index.php/shop/about">Giới thiệu</a></li>
+                    <li><a href="<?php echo base_url()?>index.php/shop/about">Giới thiệu</a></li>
                     <li><a href="#"><i class="fa fa-life-ring" style="color:#5bc0de;"></i> Hỗ trợ</a></li>
                      <li><a href="<?php echo base_url()?>index.php/cart">
                         <i class="fa fa-cart-arrow-down" style="color:#03AC9A;"></i>

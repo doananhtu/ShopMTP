@@ -24,7 +24,7 @@
                         <span class="color-caption">GIỚI THIỆU</span>
                         <div style="height: 2px; width:100%; background-color: #03AC9A; margin-top:5px;"></div>
                         <div style="color: #BABABA">
-                            <a href="http://localhost/mtp/index.php/shop/about"><i class="fa fa-caret-right" style="margin-bottom:5px;"></i> Về Chúng Tôi</a><br>
+                            <a href="<?php echo base_url()?>index.php/shop/about"><i class="fa fa-caret-right" style="margin-bottom:5px;"></i> Về Chúng Tôi</a><br>
                             <a href="#"><i class="fa fa-caret-right" style="margin-bottom:5px;"></i> Liên Hệ</a><br>
                             <a href="#"><i class="fa fa-caret-right" style="margin-bottom:5px;"></i> Bản Đồ</a><br>
                             <a href="#"><i class="fa fa-caret-right" style="margin-bottom:5px;"></i> Tuyển Dụng</a><br>

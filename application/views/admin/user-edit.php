@@ -26,7 +26,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-9 col-md-9">
 				<div class="form">
-					<form method="post" action="http://localhost/mtp/index.php/adminproduct/userEdit?idu=<?php echo $user[0]['user#'];?>">
+					<form method="post" action="<?php echo base_url()?>index.php/adminproduct/userEdit?idu=<?php echo $user[0]['user#'];?>">
 						<label>Họ tên: </label><input type="text" name="name" value="<?php echo trim($user[0]['name']);?>"></br>
 						<label>Email: </label><input type="text" name="email" value="<?php echo trim($user[0]['email']);?>"></br>
 						<label>Mật khẩu: </label><input type="text" name="pass" value="<?php echo trim($user[0]['password']);?>"></br>

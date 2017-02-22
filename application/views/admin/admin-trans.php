@@ -82,7 +82,7 @@
 										if(trans == ""){
 											swal("Vui lòng nhập đúng mã đơn hàng!");
 										}else{
-											url = "http://localhost/mtp/index.php/adminproduct/transSearch?idtrans="+trans;
+											url = "<?php echo base_url()?>index.php/adminproduct/transSearch?idtrans="+trans;
 											window.location = url;
 										}										
 									});

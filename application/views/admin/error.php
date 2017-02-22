@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div style="font-size: 30px;">
-		<a href="http://localhost/mtp/index.php/adminproduct"><i class="fa fa-arrow-left"></i></a>
+		<a href="<?php echo base_url()?>index.php/adminproduct"><i class="fa fa-arrow-left"></i></a>
 		You did not select a file to upload.
 	</div>
 </body>

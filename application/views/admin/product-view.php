@@ -42,7 +42,7 @@
 								echo '<tr>';
 								echo '<td><a href="#">'.$row['name'].'</a></td>';
 								echo '<td><img src="'.$row['images'].'" width=50px></td>';
-								echo '<td><a href="http://localhost/mtp/index.php/adminproduct/productEdit?idp='.$row['productId'].'"><i class="fa fa-pencil-square-o"></i> Edit</a></td>';
+								echo '<td><a href="<?php echo base_url()?>index.php/adminproduct/productEdit?idp='.$row['productId'].'"><i class="fa fa-pencil-square-o"></i> Edit</a></td>';
 								echo '<td><a href="'.base_url().'index.php/adminproduct/productDelete?idp='.$row['productId'].'&idc='.$idc.'">'.'<i class="fa fa-times"></i> Delete</a></td>';
 								echo '</tr>';
 							}							
@@ -59,7 +59,7 @@
 										if(name == ""){
 											swal("Vui lòng nhập đúng tên sản phẩm!");
 										}else{
-											url = "http://localhost/mtp/index.php/adminproduct/productSearch?name="+name+"&idc=<?php echo $idc?>";
+											url = "<?php echo base_url()?>index.php/adminproduct/productSearch?name="+name+"&idc=<?php echo $idc?>";
 											window.location = url;
 										}									
 									});

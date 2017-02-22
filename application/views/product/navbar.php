@@ -36,7 +36,7 @@
                     $(document).ready(function(){
                         $("button#search").click(function(){
                             var str = $("input#search").val();
-                            var url = 'http://localhost/mtp/index.php/shop/search?str='+str;
+                            var url = '<?php echo base_url()?>index.php/shop/search?str='+str;
                             window.location = url;
                         });
                     });

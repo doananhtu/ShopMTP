@@ -78,7 +78,7 @@
         <div class="row">
             <form method="post" action="<?php echo base_url()?>index.php/cart/update_qty_size">
             <h2 style="margin-top:100px;">
-                <a href="http://localhost/mtp/index.php"><span style="color:#03AC9A;"><i class="fa fa-home"></i> </span></a>
+                <a href="<?php echo base_url()?>index.php"><span style="color:#03AC9A;"><i class="fa fa-home"></i> </span></a>
                 <span><i class="fa fa-angle-double-right"></i></span>
                 <span style="color:#F99A12; font-weight: bold;">Lịch sử mua hàng của bạn</span>
             </h2>

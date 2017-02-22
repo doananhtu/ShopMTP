@@ -32,7 +32,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-9 col-md-9">
 				<div class="form">
-					<form method="post" action="http://localhost/mtp/index.php/adminproduct/transEdit?idtrans=<?php echo $trans[0]['transactionId'];?>">
+					<form method="post" action="<?php echo base_url()?>index.php/adminproduct/transEdit?idtrans=<?php echo $trans[0]['transactionId'];?>">
 						<legend>Thông tin về đơn hàng:</legend>
 						<label>Trạng thái đơn hàng: </label>
 						<?php
