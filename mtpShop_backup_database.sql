@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2017 at 10:52 AM
+-- Generation Time: Feb 22, 2017 at 02:44 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -101,13 +101,6 @@ CREATE TABLE `orders` (
   `size` char(1) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`orderId`, `transactionId`, `productId`, `name`, `qty`, `amount`, `size`) VALUES
-(0, 2, 1, 'AK-007', 1, '500000', '0');
-
 -- --------------------------------------------------------
 
 --
@@ -157,7 +150,8 @@ CREATE TABLE `transaction` (
 
 INSERT INTO `transaction` (`transactionId`, `status`, `userId`, `fullname`, `email`, `phone`, `address`, `amount`, `message`, `created`, `createt`) VALUES
 (1, 0, 1, 'Đoàn Anh Tú', 'doananhtu13395@gmail.com', '0963287143', 'Ngõ 15 Phương Mai, Đống Đa, Hà Nội', '500000', 'nhanh lên nhé', '2017-02-22', '04:43:23pm'),
-(2, 0, 1, 'Đoàn Anh Tú', 'doananhtu13395@gmail.com', '0963287143', 'Ngõ 15 Phương Mai, Đống Đa, Hà Nội', '500000', 'nhanh lên nhé', '2017-02-22', '04:44:56pm');
+(2, 0, 1, 'Đoàn Anh Tú', 'doananhtu13395@gmail.com', '0963287143', 'Ngõ 15 Phương Mai, Đống Đa, Hà Nội', '500000', 'nhanh lên nhé', '2017-02-22', '04:44:56pm'),
+(3, 0, 1, 'Đoàn Anh Tú', 'trantien13395@gmail.com', '0963287143', 'Ngõ 15 Phương Mai, Đống Đa, Hà Nội', '2500000', 'ahihi', '2017-02-22', '08:38:41pm');
 
 -- --------------------------------------------------------
 
@@ -235,6 +229,11 @@ ALTER TABLE `users`
 ALTER TABLE `admin`
   MODIFY `adminId` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
@@ -243,7 +242,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `transactionId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `transactionId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `users`
 --
