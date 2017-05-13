@@ -28,14 +28,14 @@
 				<div class="form">
 					<form method="post" action="<?php echo base_url()?>index.php/adminproduct/uploadUpdate
 						?imgfile=<?php echo $product[0]['images'];?>&idp=<?php echo $product[0]['productId'];?>"enctype="multipart/form-data">
-						<div class="title">Sửa thông tin sản phẩm</div>
-						<label>Tên: </label><input type="text" placeholder="Tên sản phẩm" id="namep" name="namep" value="<?php echo trim($product[0]['name']);?>"></br>
-						<label>Giá: </label> <input type="text" placeholder="Giá sản phẩm" id="pricep" name="pricep" value="<?php echo $product[0]['price'];?>"></br>
-						<label>Hình ảnh hiện tại: </label> <img src="<?php echo $product[0]['images'];?>" width=80px></br>
-						<label>Chọn hình ảnh mới: </label>
+						<div class="title">Update product's infomation</div>
+						<label>Name: </label><input type="text" placeholder="Tên sản phẩm" id="namep" name="namep" value="<?php echo trim($product[0]['name']);?>"></br>
+						<label>Price: </label> <input type="text" placeholder="Giá sản phẩm" id="pricep" name="pricep" value="<?php echo $product[0]['price'];?>"></br>
+						<label>Current image: </label> <img src="<?php echo $product[0]['images'];?>" width=80px></br>
+						<label>New image: </label>
 						<input type="file" id="image" name="image"></br>
-						<label>Thông tin chi tiết: </label></br><textarea id="description" name="description" class="ckeditor" value="<?php echo $product[0]['description'];?>"></textarea></br>
-						<label>Sản phẩm thuộc danh mục nào?: </label>
+						<label>Descriptions: </label></br><textarea id="description" name="description" class="ckeditor" value="<?php echo $product[0]['description'];?>"></textarea></br>
+						<label>Product's catalog: </label>
 						<select name="selectp" class="select">
 							<?php
 								foreach ($catalog as $row) {

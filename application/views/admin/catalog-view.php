@@ -25,7 +25,7 @@
 			<div class="col-xs-12 col-sm-9 col-md-9">
 				<div class="wrap-table">
 					<table border="1">
-						<tr><th colspan="3">Bảng Quản Lý</th></tr>
+						<tr><th colspan="3">Management Table</th></tr>
 						<?php 
 							foreach ($catalog as $row) {
 								if(empty($row['parent'])){

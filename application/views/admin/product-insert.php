@@ -27,12 +27,12 @@
 			<div class="col-xs-12 col-sm-9 col-md-9">
 				<div class="form">
 					<form method="post" action="<?php echo base_url()?>index.php/adminproduct/uploadInsert" enctype="multipart/form-data">			
-						<div class="title">Thêm sản phẩm mới</div>
-						<label>Tên: </label><input type="text" placeholder="Tên sản phẩm" id="namep" name="namep"></br>
-						<label>Giá: </label> <input type="text" placeholder="Giá sản phẩm" id="pricep" name="pricep"></br>
-						<label>Hình ảnh: </label><input type="file" id="image" name="image"></br>
-						<label>Thông tin chi tiết: </label></br><textarea id="description" name="description" class="ckeditor"></textarea></br>
-						<label>Sản phẩm thuộc danh mục nào?: </label>
+						<div class="title">Add new products</div>
+						<label>Name: </label><input type="text" placeholder="Tên sản phẩm" id="namep" name="namep"></br>
+						<label>Price: </label> <input type="text" placeholder="Giá sản phẩm" id="pricep" name="pricep"></br>
+						<label>Image: </label><input type="file" id="image" name="image"></br>
+						<label>Descriptions: </label></br><textarea id="description" name="description" class="ckeditor"></textarea></br>
+						<label>Product's catalog?: </label>
 						<select name="selectp" class="select">
 							<?php
 								foreach ($catalog as $row) {
