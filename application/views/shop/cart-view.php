@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="box2">
-                        <i class="fa fa-clock-o"></i> Mở cửa<br>
+                        <i class="fa fa-clock-o"></i> Open time<br>
                         <span style="font-size: 18px;">9h30 - 21h30</span>
                     </div>
                 </div>
@@ -57,16 +57,16 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-cc-visa"></i> thanh toán linh hoạt </span></a>
+                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-cc-visa"></i> 安易決済 </span></a>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-mail-reply-all"></i> đổi trả dễ dàng </span></a>
+                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-mail-reply-all"></i> 安易返還 </span></a>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-truck"></i> giao hàng miễn phí </span></a>
+                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-truck"></i>  無料配信 </span></a>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-shopping-cart"></i> uy tín-chất lượng </span></a>
+                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-shopping-cart"></i> 威信・品質 </span></a>
                     </div>
                 </div>
             </div>
@@ -80,16 +80,16 @@
             <h2 style="margin-top:100px;">
                 <a href="<?php echo base_url()?>index.php"><span style="color:#03AC9A;"><i class="fa fa-home"></i> </span></a>
                 <span><i class="fa fa-angle-double-right"></i></span>
-                <span style="color:#F99A12; font-weight: bold;">GIỎ HÀNG CỦA BẠN</span>
+                <span style="color:#F99A12; font-weight: bold;">Your cart</span>
             </h2>
             <table>
-                <th>STT</th>
-                <th>Ảnh Sản Phẩm</th>
-                <th>Size</th>
-                <th>Giá(VNĐ)</th>
-                <th>Số Lượng</th>
-                <th>Tổng Giá Trị</th>
-                <th>Xóa</th>
+                <th>番号</th>
+                <th>商品の写真</th>
+                <th>サイズ</th>
+                <th>価格(VNĐ)</th>
+                <th>量</th>
+                <th>金高</th>
+                <th>削除</th>
                     <?php
                     $i = 1;
                     $size = array('S'=>'S',"M"=>'M','L'=>'L','XL'=>'XL','XXL'=>'XXL');
@@ -127,15 +127,15 @@
                 <tr>
                     <td colspan="3">
                         <div class="sum">
-                            <span>Tổng số tiền: <?php echo number_format($sum);?> VNĐ</span>
+                            <span>金高: <?php echo number_format($sum);?> VNĐ</span>
                         </div>
                     </td>
                     <td colspan="4">
                         <div>
-                            <a href="<?php echo base_url()?>index.php"><div class="cart-control">Quay lại cửa hàng</div></a>
-                            <input type="submit" id="udqty" value="Cập nhật thông tin" class="submit cart-control">
-                            <a href="<?php echo base_url()?>index.php/cart/destroy"><div class="cart-control">Xóa toàn bộ giỏ hàng</div></a>
-                            <a href="<?php echo base_url()?>index.php/checkout?amount=<?php echo $sum?>"><div class="cart-control">Thanh toán ngay</div></a>
+                            <a href="<?php echo base_url()?>index.php"><div class="cart-control">Come back to shop</div></a>
+                            <input type="submit" id="udqty" value="Update" class="submit cart-control">
+                            <a href="<?php echo base_url()?>index.php/cart/destroy"><div class="cart-control">Delete all</div></a>
+                            <a href="<?php echo base_url()?>index.php/checkout?amount=<?php echo $sum?>"><div class="cart-control">Pay now</div></a>
                         </div>
                     </td>
                 </tr>

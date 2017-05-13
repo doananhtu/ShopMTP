@@ -211,7 +211,7 @@ class Users extends CI_Controller{
 
 		$user = $this->Musers->getIdUser($data['email']);
 		$config['base_url'] = 'http://localhost//mtp/index.php/users/transHis';
-			$config['total_rows'] = $this->Musers->count_trans($user[0]['user#']);
+			$config['total_rows'] = $this->Musers->count_trans($user[0]['userId']);
 			$config['per_page'] = 5;
 	        $config['uri_segment'] = 3;
 	        $config['num_links'] = 2;
@@ -240,7 +240,7 @@ class Users extends CI_Controller{
 	        $this->load->library('pagination',$config);
 	        $this->pagination->initialize($config);
 
-	        $trans_array = $this->Musers->getInfoTrans($config['per_page'],$this->uri->segment(3),$user[0]['user#']);
+	        $trans_array = $this->Musers->getInfoTrans($config['per_page'],$this->uri->segment(3),$user[0]['userId']);
 	        $data['trans'] = $trans_array;
 		$this->load->view("shop/trans-view",$data);
 	}

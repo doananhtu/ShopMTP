@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="box2">
-                        <i class="fa fa-clock-o"></i> Mở cửa<br>
+                        <i class="fa fa-clock-o"></i> Open time<br>
                         <span style="font-size: 18px;">9h30 - 21h30</span>
                     </div>
                 </div>
@@ -59,16 +59,16 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-cc-visa"></i> thanh toán linh hoạt </span></a>
+                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-cc-visa"></i> 安易決済 </span></a>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-mail-reply-all"></i> đổi trả dễ dàng </span></a>
+                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-mail-reply-all"></i> 安易返還 </span></a>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-truck"></i> giao hàng miễn phí </span></a>
+                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-truck"></i> 無料配信 </span></a>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-shopping-cart"></i> uy tín-chất lượng </span></a>
+                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-shopping-cart"></i> 威信・品質 </span></a>
                     </div>
                 </div>
             </div>
@@ -80,12 +80,12 @@
         <div class="row">
         	<!--sidebar-->
             <div class="col-xs-12 col-sm-3 col-md-3" style="color: #fff;">                
-                <div class="panel-dark"><i class="fa fa-th-list"></i> Danh mục sản phẩm</div>
+                <div class="panel-dark"><i class="fa fa-th-list"></i> 商品の項目</div>
                 <div class="panel-dark-body panel-bg">
                     <?php include 'sidebar.php';?>
                	</div>
                 
-                <div class="panel-news hidden-xs"><i class="fa fa-list"></i> HỖ TRỢ TRỰC TUYẾN</div>
+                <div class="panel-news hidden-xs"><i class="fa fa-list"></i> サポート</div>
                 <div class="panel-news-body hidden-xs">
                     <div style="margin-bottom: 20px;">
                         <a href="#"><img src="<?php echo base_url() ?>asset/images/yahoo-on.png"></a>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
 
-                <div class="panel-news hidden-xs"><i class="fa fa-list"></i> TIN TỨC</div>
+                <div class="panel-news hidden-xs"><i class="fa fa-list"></i> ニュース</div>
                 <div class="panel-news-body hidden-xs">
                     <?php
                     for($i=0; $i<5; $i++){
@@ -121,7 +121,7 @@
                 </div>
                 <!-- /Slideshows-->
 
-                <div class="panel-dark" style="width:94%; margin-left: 22px;"><i class="fa fa-th-list"></i> Sản Phẩm</div>
+                <div class="panel-dark" style="width:94%; margin-left: 22px;"><i class="fa fa-th-list"></i> 商品</div>
                 <div class="panel-dark-body2">
 					<?php 
                         foreach ($product as $row) {
@@ -148,7 +148,7 @@
                 if(count($this->cart->contents())>0){
                     echo '<a href="'.base_url().'index.php/cart"><ul class="status hidden-xs">';
                     echo '<i class="fa fa-cart-arrow-down"></i>';
-                    echo '<li>Vào giỏ hàng</li>';
+                    echo '<li>Go to cart</li>';
                     echo '</ul></a>';
                 }
             ?>   

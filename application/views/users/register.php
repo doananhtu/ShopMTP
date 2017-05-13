@@ -17,7 +17,7 @@
 <body>
 	<div class="header">
 		<a href="http://localhost/mtp"><span style="border-right:1px solid #fff; padding-right: 8px;color:#fff;">MTP</span></a>
-		Đăng Ký
+		サインアップ
 	</div>
 	<div class="container">
 		<div class="row">
@@ -26,20 +26,20 @@
 				<div class="box-form">
 					<?php echo form_open(base_url().'index.php/users/register'); ?> 
 						<div class="head-box">MTP SHOP</div>
-						<input type="text" name="fname" placeholder="Họ Tên" class="input"><br>
+						<input type="text" name="fname" placeholder="User name" class="input"><br>
 						<div class="err"><?php echo form_error('fname'); ?></div>
 						<input type="text" name="femail" placeholder="Email" class="input"><br>
 						<div class="err"><?php echo form_error('femail'); ?></div>
-						<input type="password" name="fpass" placeholder="Mật Khẩu" class="input"><br>
+						<input type="password" name="fpass" placeholder="Password" class="input"><br>
 						<div class="err"><?php echo form_error('fpass'); ?></div>
-						<input type="password" name="fpasscf" placeholder="Xác nhận lại mật khẩu" class="input"><br>
+						<input type="password" name="fpasscf" placeholder="Confirm password" class="input"><br>
 						<div class="err"><?php echo form_error('fpasscf'); ?></div>
 						<div class="err"><?php echo $error; ?></div>
 						<p style="margin-top:20px; margin-left: 10px;">
-							Bằng việc click vào nút Đăng ký bạn đã đồng ý 
-							<a href="#" style="font-weight: bold;">Điều khoản sử dụng</a>
+							By clicking submit you agree to the  
+							<a href="#" style="font-weight: bold;">Terms and Conditions</a>
 						</p>
-						<input type="submit" class="input submit" value="Đăng Ký">					
+						<input type="submit" class="input submit" value="サインアップ">					
 					</form>
 				</div>
 			</div>

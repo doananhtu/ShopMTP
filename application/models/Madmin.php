@@ -65,6 +65,16 @@ class Madmin extends CI_Model{
 		$this->db->where("productId",$productid);
 		$this->db->update('product',$data);
 	}
+	public function updateProduct2($productid,$catalogid,$name,$price,$des){
+		$data = array(
+			'catalogId' => $catalogid,
+			'name' => $name,
+			'price' => $price,
+			'description' => $des
+			);
+		$this->db->where("productId",$productid);
+		$this->db->update('product',$data);
+	}
 
 	public function selectAllProduct($total,$start,$id){
 		$this->db->limit($total, $start);

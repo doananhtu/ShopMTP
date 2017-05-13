@@ -21,10 +21,10 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class=""><a href="#">Sản phẩm<span class="sr-only">(current)</span></a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-gift" style="color:#F68C22"></i> Khuyến mãi</a></li>
-                    <li><a href="<?php echo base_url()?>/index.php/shop/about">Giới thiệu</a></li>
-                    <li><a href="#"><i class="fa fa-life-ring" style="color:#5bc0de;"></i> Hỗ trợ</a></li>
+                    <li class=""><a href="#"> 商品<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-gift" style="color:#F68C22"></i> セールオフ</a></li>
+                    <li><a href="<?php echo base_url()?>/index.php/shop/about"> 紹介</a></li>
+                    <li><a href="#"><i class="fa fa-life-ring" style="color:#5bc0de;"></i> サポート</a></li>
                 </ul>
                 <div class="navbar-form navbar-left" role="search">
                     <div class="form-group">
@@ -46,8 +46,8 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo base_url() ?>index.php/users/login" style="color:#08AED8"><i class="fa fa-sign-in"></i> Đăng Nhập</a></li>
-                            <li><a href="<?php echo base_url() ?>index.php/users/register" style="color:#F68C22"><i class="fa fa-thumb-tack"></i> Đăng Ký Tài Khoản</a></li>     
+                            <li><a href="<?php echo base_url() ?>index.php/users/login" style="color:#08AED8"><i class="fa fa-sign-in"></i> ログイン</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/users/register" style="color:#F68C22"><i class="fa fa-thumb-tack"></i> サインアップ</a></li>     
                         </ul>
                     </li>
                 </ul>

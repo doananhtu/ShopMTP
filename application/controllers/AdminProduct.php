@@ -79,8 +79,16 @@ class AdminProduct extends CI_Controller{
         $config['max_height']           = 968;
         $this->load->library('upload', $config);
 
-        if ( ! $this->upload->do_upload('image')){
-        	header('location: '.base_url().'index.php/admin');
+        if ( ! $this->upload->do_upload('image')){       	
+        	$catalogid = $this->input->post('selectp');
+        	$name = $this->input->post('namep');
+        	$price = $this->input->post('pricep');
+        	$des = $this->input->post('description');
+        	if(empty($des))
+        		$des="đang cập nhật";
+        	$productid = $this->input->get('idp');
+        	$this->Madmin->updateProduct2($productid,$catalogid,$name,$price,$des);
+        	header('location: '.base_url().'index.php/adminproduct/showp?idc='.$catalogid);
         }else{
         	$imageInfo = $this->upload->data();
         	$catalogid = $this->input->post('selectp');

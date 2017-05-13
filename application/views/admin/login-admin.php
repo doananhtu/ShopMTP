@@ -17,12 +17,12 @@
 	<div class="login-form">
 		<?php echo form_open(base_url().'index.php/admin/login'); ?>	
 			<i class="fa fa-user" style="margin-left:28px; margin-top:20px; margin-bottom:5px;"></i></br>
-			<input type="text" name='fadmin' placeholder="UserName" class='input' id='fname'></br>
+			<input type="text" name='fadmin' placeholder="User name" class='input' id='fname'></br>
 			<div class="err"><?php echo form_error('fadmin'); ?></div>
 			<i class="fa fa-unlock-alt" style="margin-left:28px; margin-top:15px;"></i></br>
-			<input type="password" name='fpass' placeholder='PassWord' class="input" id='fpass'></br>
+			<input type="password" name='fpass' placeholder='Password' class="input" id='fpass'></br>
 			<div class="err"><?php echo form_error('fpass'); ?></div>
-			<input type="submit" value="LOGIN" class='submit'>
+			<input type="submit" value="ログイン" class='submit'>
 		</form>
 	</div>
 	<div class="caption">MTPB SHOP. Copyright &copy; 2015 by MTPB-TEAM</div>

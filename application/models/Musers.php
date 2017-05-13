@@ -71,7 +71,7 @@ class Musers extends CI_Model{
 
 	//Xem lịch sử mua hàng
 	public function count_trans($idu){
-		$this->db->where("user#",$idu);
+		$this->db->where("userId",$idu);
 		$query = $this->db->get('transaction');
 		return $query->num_rows();
 	}

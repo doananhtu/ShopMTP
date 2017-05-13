@@ -54,16 +54,16 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-cc-visa"></i> thanh toán linh hoạt </span></a>
+                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-cc-visa"></i> 安易決済 </span></a>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-mail-reply-all"></i> đổi trả dễ dàng </span></a>
+                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-mail-reply-all"></i> 安易返還 </span></a>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-truck"></i> giao hàng miễn phí </span></a>
+                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-truck"></i> 無料配信 </span></a>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-shopping-cart"></i> uy tín-chất lượng </span></a>
+                        <a href="#" style="text-decoration: none;"><span class="khauhieu"><i class="fa fa-shopping-cart"></i> 威信・品質 </span></a>
                     </div>
                 </div>
             </div>
@@ -75,26 +75,12 @@
         <div class="row">
         	<!--sidebar-->
             <div class="col-xs-12 col-sm-3 col-md-3" style="color: #fff;">                
-                <div class="panel-dark">Danh mục sản phẩm</div>
+                <div class="panel-dark"><i class="fa fa-th-list"></i> 商品の項目</div>
                 <div class="panel-dark-body panel-bg">
-                    <ul class="menu-watch">
-                        <?php 
-                        foreach ($catalog as $row){
-                            if($row['parent'] == null){
-                                echo '<li><a href ="#"><i class="fa fa-caret-right"></i> '. $row['name'] .'</a><ul>';
-                                foreach ($catalog as $row2){
-                                    if($row2['parent'] == $row['catalogId'])
-                                        echo '<li>'. $row2['name'].'</li>';
-                                }                                
-                                echo '</ul>';              
-                                echo '</li>';
-                            }                                                                       
-                        }
-                        ?>
-                    </ul>
-               	</div>
+                    <?php include 'sidebar.php';?>
+                </div>
                 
-                <div class="panel-news hidden-xs"><i class="fa fa-list"></i> HỖ TRỢ TRỰC TUYẾN</div>
+                <div class="panel-news hidden-xs"><i class="fa fa-list"></i> サポート</div>
                 <div class="panel-news-body hidden-xs">
                     <div style="margin-bottom: 20px;">
                         <a href="#"><img src="<?php echo base_url() ?>asset/images/yahoo-on.png"></a>
@@ -104,7 +90,7 @@
                     </div>
                 </div>
 
-                <div class="panel-news hidden-xs"><i class="fa fa-list"></i> TIN TỨC</div>
+                <div class="panel-news hidden-xs"><i class="fa fa-list"></i> ニュース</div>
                 <div class="panel-news-body hidden-xs">
                     <?php
                     for($i=0; $i<5; $i++){

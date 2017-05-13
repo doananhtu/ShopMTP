@@ -21,7 +21,7 @@
 	</style>
 </head>
 <body>
-	<div class="header">Đổi Mật Khẩu</div>
+	<div class="header">パスワードを変更する</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-3 col-md-3"></div>
@@ -29,11 +29,11 @@
 				<div class="box-form">
 					<?php echo form_open(base_url().'index.php/users/changePass'); ?>
 						<div class="head-box">MTP SHOP</div>
-						<input type="password" name="cpass" placeholder="Mật khẩu hiện tại" class="input input2"><br>
+						<input type="password" name="cpass" placeholder="Currrent Password" class="input input2"><br>
 						<div class="err"><?php echo form_error('cpass'); ?></div>
-						<input type="password" name="npass" placeholder="Mật khấu mới" class="input input2"><br>
+						<input type="password" name="npass" placeholder="New Password" class="input input2"><br>
 						<div class="err"><?php echo form_error('npass'); ?></div>
-						<input type="submit" class="input submit input2" value="Cập Nhật">				
+						<input type="submit" class="input submit input2" value="アップデイト">				
 					</form>
 				</div>
 			</div>
